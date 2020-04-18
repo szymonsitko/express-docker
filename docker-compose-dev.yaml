@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  server:
+    container_name: node-server-dev
+    build:
+      context: .
+      dockerfile: ./docker/server/Dockerfile.dev
+    ports:
+      - ${APP_PORT}:5000
+    volumes:
+      - ./server:/usr/src/app

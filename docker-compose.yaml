@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  server:
+    container_name: node-server-prod
+    build:
+      context: .
+      dockerfile: ./docker/server/Dockerfile
+    ports:
+      - ${APP_PORT}:5000
